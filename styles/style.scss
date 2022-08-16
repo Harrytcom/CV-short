@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
+
+// VARIABLES
+@function rem($num) {
+  @return (strip-unit($num) / 16) * 1rem;
+}
+
+@function strip-unit($num) {
+  @return $num / ($num*0 + 1);
+}
+
+$base: rem(4px);
+// resolution higher
+$breakpoint-sm-min: 576px;
+$breakpoint-md-min: 768px;
+$breakpoint-lg-min: 992px;
+$breakpoint-xl-min: 1200px;
+$breakpoint-xxl-min: 1400px;
+
+// resolution lower
+$breakpoint-xs-max: $breakpoint-sm-min - 1px; // от 576px;
+$breakpoint-sm-max: $breakpoint-md-min - 1px; // от 768px;
+$breakpoint-md-max: $breakpoint-lg-min - 1px; // от 992px;
+$breakpoint-lg-max: $breakpoint-xl-min - 1px; // от 1200px;
+$breakpoint-xl-min: $breakpoint-xxl-min - 1px; // от 1400px;
+
+$bg-color: #ecf7f3;
+$primary-black: #2d2d2d;
+$secondary-black: #4a4a4a;
+$primary-gray: #7c7c7c;
+$green: #48b774;
+$orange: #ff8345;
+
+// MEDIA
+html {
+  @media  (min-width:$breakpoint-xxl-min ) {
+    font-size: $base*4,5;
+  }
+  @media  (max-width: $breakpoint-md-max) {
+    font-size: $base*3;
+  }
+  @media  (max-width: $breakpoint-md-min ) {
+    font-size: $base*2;
+  }
+}
+
+// COMMON
+body {
+  background-color: $bg-color;
+  // box-sizing: border-box;
+}
+@mixin Poppins {
+  font-family: 'Poppins', sans-serif;
+}
+@mixin Roboto {
+  font-family: 'Roboto', sans-serif;
+}
+
+//     font-size: 12px;
+//     line-height: 120%;
+//     background-color: #48b774;
+//     object-fit: cover;
+//     width: 90px;
+//     height: 24px;
+
+
+.outer-wrapper {
+  max-width: 1100px;
+  padding: 0 150px;
+  margin: 0 auto;
+}
+
+// BUTTON'S
+.button {
+  @include Poppins;
+
+  color: #fff;
+  font-weight: 500;
+  background-color: $green;
+  object-fit: cover;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 20px;
+  transition: opacity .3s ease-in-out;
+  cursor: pointer;
+
+}
+
+.getStarted-btn {
+  grid-area: start;
+  width: 128px;
+  height: 46px;
+  margin-bottom: $base*12;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.signUp-btn {
+  font-size: 16px;
+  line-height: 24px;
+  width: 108px;
+  height: 42px;
+  justify-self: center;
+}
+
+::placeholder {
+  color: #a1a1a1;
+  opacity: 1;
+}
+
+.header {
+  @include Poppins;
+  
+  // position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $base*8;
+  margin-bottom: $base*30;
+
+
+  // NAVIGATION
+  .navigation-burger-btn {
+    display: none;
+    height: $base*12;
+    width: $base*12;
+    background-color: $green;
+    border-radius: $base;
+
+    object-fit: cover;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    .burger-line {
+      display: block;
+      height: $base;
+      width: 100%;
+      background-color: $orange;
+      margin-top: $base;
+    }
+
+    @media (max-width: $breakpoint-md-max) {
+      display: block;
+    }
+  }
+
+  &__logo {
+    width: $base*33;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+  }
+
+  &__navigation-link:not(:last-child) {
+    margin-right: $base*8;
+  };
+
+  &__navigation-link:hover {
+    box-sizing: border-box;
+  };
+}
+
+.main-section {
+  @include Poppins;
+
+  // position: relative;
+  font-weight: 700;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1.8fr 1fr;
+  grid-template-rows: 2fr .5fr .5fr 1fr;
+  gap: 0px 0px; 
+  grid-template-areas:
+    "title image"
+    "start image"
+    "search image"
+    "price image";
+  
+  .heading {
+    grid-area: title;
+
+    &__title {
+      max-width: 375px;
+      font-size: $base*12;
+      color: $primary-black;
+      margin: 0;
+      margin-bottom: $base*6;
+
+      span {
+        color: $orange;
+      }
+    }
+
+    &__caption {
+      max-width: 444px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 26px;
+      color: $primary-gray;
+      margin: 0;
+      margin-bottom: $base*8;
+    }
+  }
+
+  .price-plan {
+    grid-area: price;
+
+    &__description {
+      @include Roboto;
+
+      
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $primary-gray;
+
+      span {
+        color: $orange;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.main-section__image {
+  grid-area: image;
+  display: flex;
+  // background: url(/img/pic_greenCircle.png) 50% 30%;
+  background-repeat: no-repeat;
+}
+
+.main-section__figure {
+  border: 2px solid #e8e8e8;
+  border-radius: 50%;
+  width: 450px;
+  position: absolute;
+  height: 450px;
+  top: -7%;
+}
+
+.rotation-content {
+  grid-area: image;
+  background-repeat: no-repeat;
+  animation: 2s linear infinite;
+  max-width: 450px;
+  height: auto;
+
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  background: url(/img/pic_greenCircle.png) 50% 30%;
+  background-repeat: no-repeat;
+  z-index: 5;
+
+  .main-image {
+    z-index: 10;
+  }
+
+  .flag {
+    position: absolute;
+    top: -246px;
+    left: -224px;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // animation: move 2s infinite linear;
+  }
+}
+
+.move-1 {
+    offset-path: path('M226,450a224,224 0 1,0 448,0a224,224 0 1,0 -448,0');
+
+    // transform: translate(-50%, -50%);
+    -webkit-animation: move 2s infinite linear;
+    animation: move 2s infinite linear;
+}
+
+
+
+  // offset-path: path('M56,33.12A150,150,0,1,1,0,150,149.34,149.34,0,01,56,33.12');
+  // offset-path: path('M196.5 148C125.833 168.333 -11.9999 167.4 2.00005 1');
+  // offset-path: path('M79.5 263.5C16 193.5 -68.6 43 101 1');
+  // offset-path: path('M0.5 182C24.5 87.3333 97.4 -73.6 197 40');
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+
+.search-bar {
+  grid-area: search;
+  display: flex;
+  // width: 80%;
+  height: 62px;
+  margin-bottom: $base*10;
+  background-color: #fff;
+  justify-content: space-between;
+  border-radius: 100px;
+  border: none;
+  padding: 4px 4px 4px 24px;
+  max-width: 597px;
+
+  &__input {
+    @include Roboto;
+
+    padding-left: $base*10;
+    font-size: 16px;
+    font-weight: 400;
+    border: 0;
+    margin: 0;
+    // width: 80%;
+    outline: none;
+  }
+
+  &__search-btn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: url(/img/pic_search.png) no-repeat;
+    width: 55px;
+    height: 55px;
+    align-self: center;
+    transition: transform .2s ease-in;
+    cursor: pointer;
+  }
+}
