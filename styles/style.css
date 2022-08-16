@@ -1,43 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap");
 @media (min-width: 1400px) {
   html {
-    font-size: 1rem, 5;
-  }
-}
+    font-size: 1rem, 5; } }
 @media (max-width: 991px) {
   html {
-    font-size: 0.75rem;
-  }
-}
+    font-size: 0.75rem; } }
 @media (max-width: 768px) {
   html {
-    font-size: 0.5rem;
-  }
-}
+    font-size: 0.5rem; } }
 
 body {
-  background-color: #ecf7f3;
-}
+  background-color: #ecf7f3; }
 
 .outer-wrapper {
   max-width: 1100px;
   padding: 0 150px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .button {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
   font-weight: 500;
   background-color: #48b774;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: none;
   box-sizing: border-box;
   border-radius: 20px;
-  transition: opacity 0.3s ease-in-out;
-  cursor: pointer;
-}
+  transition: opacity .3s ease-in-out;
+  cursor: pointer; }
 
 .getStarted-btn {
   grid-area: start;
@@ -45,133 +35,101 @@ body {
   height: 46px;
   margin-bottom: 3rem;
   font-size: 15px;
-  line-height: 22px;
-}
+  line-height: 22px; }
 
 .signUp-btn {
   font-size: 16px;
   line-height: 24px;
   width: 108px;
   height: 42px;
-  justify-self: center;
-}
-
-::-moz-placeholder {
-  color: #a1a1a1;
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  color: #a1a1a1;
-  opacity: 1;
-}
+  justify-self: center; }
 
 ::placeholder {
   color: #a1a1a1;
-  opacity: 1;
-}
+  opacity: 1; }
 
 .header {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 2rem;
-  margin-bottom: 7.5rem;
-}
-.header .navigation-burger-btn {
-  display: none;
-  height: 3rem;
-  width: 3rem;
-  background-color: #48b774;
-  border-radius: 0.25rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: none;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-.header .navigation-burger-btn .burger-line {
-  display: block;
-  height: 0.25rem;
-  width: 100%;
-  background-color: #ff8345;
-  margin-top: 0.25rem;
-}
-@media (max-width: 991px) {
+  margin-bottom: 7.5rem; }
   .header .navigation-burger-btn {
-    display: block;
-  }
-}
-.header__logo {
-  width: 8.25rem;
-}
-.header a {
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-}
-.header__navigation-link:not(:last-child) {
-  margin-right: 2rem;
-}
-.header__navigation-link:hover {
-  box-sizing: border-box;
-}
+    display: none;
+    height: 3rem;
+    width: 3rem;
+    background-color: #48b774;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer; }
+    .header .navigation-burger-btn .burger-line {
+      display: block;
+      height: 0.25rem;
+      width: 100%;
+      background-color: #ff8345;
+      margin-top: 0.25rem; }
+    @media (max-width: 991px) {
+      .header .navigation-burger-btn {
+        display: block; } }
+  .header__logo {
+    width: 8.25rem; }
+  .header a {
+    text-decoration: none;
+    color: inherit;
+    position: relative; }
+  .header__navigation-link:not(:last-child) {
+    margin-right: 2rem; }
+  .header__navigation-link:hover {
+    box-sizing: border-box; }
 
 .main-section {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-columns: 1.8fr 1fr;
-  grid-template-rows: 2fr 0.5fr 0.5fr 1fr;
+  grid-template-rows: 2fr .5fr .5fr 1fr;
   gap: 0px 0px;
-  grid-template-areas: "title image" "start image" "search image" "price image";
-}
-.main-section .heading {
-  grid-area: title;
-}
-.main-section .heading__title {
-  max-width: 375px;
-  font-size: 3rem;
-  color: #2d2d2d;
-  margin: 0;
-  margin-bottom: 1.5rem;
-}
-.main-section .heading__title span {
-  color: #ff8345;
-}
-.main-section .heading__caption {
-  max-width: 444px;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 26px;
-  color: #7c7c7c;
-  margin: 0;
-  margin-bottom: 2rem;
-}
-.main-section .price-plan {
-  grid-area: price;
-}
-.main-section .price-plan__description {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  color: #7c7c7c;
-}
-.main-section .price-plan__description span {
-  color: #ff8345;
-  font-weight: 500;
-}
+  grid-template-areas: "title image" "start image" "search image" "price image"; }
+  .main-section .heading {
+    grid-area: title; }
+    .main-section .heading__title {
+      max-width: 375px;
+      font-size: 3rem;
+      color: #2d2d2d;
+      margin: 0;
+      margin-bottom: 1.5rem; }
+      .main-section .heading__title span {
+        color: #ff8345; }
+    .main-section .heading__caption {
+      max-width: 444px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 26px;
+      color: #7c7c7c;
+      margin: 0;
+      margin-bottom: 2rem; }
+  .main-section .price-plan {
+    grid-area: price; }
+    .main-section .price-plan__description {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #7c7c7c; }
+      .main-section .price-plan__description span {
+        color: #ff8345;
+        font-weight: 500; }
 
 .main-section__image {
   grid-area: image;
   display: flex;
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat; }
 
 .main-section__figure {
   border: 2px solid #e8e8e8;
@@ -179,14 +137,12 @@ body {
   width: 450px;
   position: absolute;
   height: 450px;
-  top: -7%;
-}
+  top: -7%; }
 
 .rotation-content {
   grid-area: image;
   background-repeat: no-repeat;
-  -webkit-animation: 2s linear infinite;
-          animation: 2s linear infinite;
+  animation: 2s linear infinite;
   max-width: 450px;
   height: auto;
   justify-content: center;
@@ -195,40 +151,24 @@ body {
   display: flex;
   background: url(/img/pic_greenCircle.png) 50% 30%;
   background-repeat: no-repeat;
-  z-index: 5;
-}
-.rotation-content .main-image {
-  z-index: 10;
-}
-.rotation-content .flag {
-  position: absolute;
-  top: -246px;
-  left: -224px;
-}
+  z-index: 5; }
+  .rotation-content .main-image {
+    z-index: 10; }
+  .rotation-content .flag {
+    position: absolute;
+    top: -246px;
+    left: -224px; }
 
 .move-1 {
   offset-path: path("M226,450a224,224 0 1,0 448,0a224,224 0 1,0 -448,0");
   -webkit-animation: move 2s infinite linear;
-  animation: move 2s infinite linear;
-}
-
-@-webkit-keyframes move {
-  0% {
-    offset-distance: 0%;
-  }
-  100% {
-    offset-distance: 100%;
-  }
-}
+  animation: move 2s infinite linear; }
 
 @keyframes move {
   0% {
-    offset-distance: 0%;
-  }
+    offset-distance: 0%; }
   100% {
-    offset-distance: 100%;
-  }
-}
+    offset-distance: 100%; } }
 .search-bar {
   grid-area: search;
   display: flex;
@@ -239,25 +179,24 @@ body {
   border-radius: 100px;
   border: none;
   padding: 4px 4px 4px 24px;
-  max-width: 597px;
-}
-.search-bar__input {
-  font-family: "Roboto", sans-serif;
-  padding-left: 2.5rem;
-  font-size: 16px;
-  font-weight: 400;
-  border: 0;
-  margin: 0;
-  outline: none;
-}
-.search-bar__search-btn {
-  border: none;
-  margin: 0;
-  padding: 0;
-  background: url(/img/pic_search.png) no-repeat;
-  width: 55px;
-  height: 55px;
-  align-self: center;
-  transition: transform 0.2s ease-in;
-  cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+  max-width: 597px; }
+  .search-bar__input {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 2.5rem;
+    font-size: 16px;
+    font-weight: 400;
+    border: 0;
+    margin: 0;
+    outline: none; }
+  .search-bar__search-btn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: url(/img/pic_search.png) no-repeat;
+    width: 55px;
+    height: 55px;
+    transition: transform .2s ease-in;
+    align-self: center;
+    cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */
