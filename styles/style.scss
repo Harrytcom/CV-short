@@ -108,6 +108,10 @@ body {
   opacity: 1;
 }
 
+input {
+  background-color: white;
+}
+
 .header {
   @include Poppins;
   
@@ -231,7 +235,7 @@ body {
 .main-section__image {
   grid-area: image;
   display: flex;
-  // background: url(/img/pic_greenCircle.png) 50% 30%;
+  // background: url(./img/pic_greenCircle.png) 50% 30%;
   background-repeat: no-repeat;
 }
 
@@ -255,7 +259,7 @@ body {
   align-items: center;
   position: relative;
   display: flex;
-  background: url(/img/pic_greenCircle.png) 50% 30%;
+  background: url(./img/pic_greenCircle.png) 50% 30%;
   background-repeat: no-repeat;
   z-index: 5;
 
@@ -328,7 +332,7 @@ body {
     border: none;
     margin: 0;
     padding: 0;
-    background: url(/img/pic_search.png) no-repeat;
+    background: url(./img/pic_search.png) no-repeat;
     width: 55px;
     height: 55px;
     transition: transform .2s ease-in;
