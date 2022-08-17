@@ -197,7 +197,7 @@ input {
   align-items: center;
   position: relative;
   display: flex;
-  background: url(./img/pic_greenCircle.png) 50% 30%;
+  background: url(../img/pic_greenCircle.png) 50% 30%;
   background-repeat: no-repeat;
   z-index: 5;
 }
@@ -258,7 +258,7 @@ input {
   border: none;
   margin: 0;
   padding: 0;
-  background: url(./img/pic_search.png) no-repeat;
+  background: url(../img/pic_search.png) no-repeat;
   width: 55px;
   height: 55px;
   transition: transform 0.2s ease-in;
