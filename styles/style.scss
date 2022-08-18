@@ -267,7 +267,17 @@ input {
     z-index: 10;
   }
 
-  .flag {
+  .flag-1 {
+    position: absolute;
+    top: -246px;
+    left: -224px;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    // animation: move 2s infinite linear;
+  }
+
+  .flag-2 {
     position: absolute;
     top: -246px;
     left: -224px;
@@ -282,8 +292,8 @@ input {
     offset-path: path('M226,450a224,224 0 1,0 448,0a224,224 0 1,0 -448,0');
 
     // transform: translate(-50%, -50%);
-    -webkit-animation: move 2s infinite linear;
-    animation: move 2s infinite linear;
+    -webkit-animation: move 20s infinite linear;
+    animation: move 20s infinite linear;
 }
 
 
@@ -295,10 +305,10 @@ input {
 
 @keyframes move {
   0% {
-    offset-distance: 0%;
+    offset-distance: 100%;
   }
   100% {
-    offset-distance: 100%;
+    offset-distance: 0%;
   }
 }
 

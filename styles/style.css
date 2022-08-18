@@ -204,7 +204,12 @@ input {
 .rotation-content .main-image {
   z-index: 10;
 }
-.rotation-content .flag {
+.rotation-content .flag-1 {
+  position: absolute;
+  top: -246px;
+  left: -224px;
+}
+.rotation-content .flag-2 {
   position: absolute;
   top: -246px;
   left: -224px;
@@ -212,25 +217,25 @@ input {
 
 .move-1 {
   offset-path: path("M226,450a224,224 0 1,0 448,0a224,224 0 1,0 -448,0");
-  -webkit-animation: move 2s infinite linear;
-  animation: move 2s infinite linear;
+  -webkit-animation: move 20s infinite linear;
+  animation: move 20s infinite linear;
 }
 
 @-webkit-keyframes move {
   0% {
-    offset-distance: 0%;
+    offset-distance: 100%;
   }
   100% {
-    offset-distance: 100%;
+    offset-distance: 0%;
   }
 }
 
 @keyframes move {
   0% {
-    offset-distance: 0%;
+    offset-distance: 100%;
   }
   100% {
-    offset-distance: 100%;
+    offset-distance: 0%;
   }
 }
 .search-bar {
