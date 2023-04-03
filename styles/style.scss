@@ -47,7 +47,6 @@ html {
 // COMMON
 body {
   background-color: $bg-color;
-  // box-sizing: border-box;
 }
 @mixin Poppins {
   font-family: 'Poppins', sans-serif;
@@ -55,14 +54,6 @@ body {
 @mixin Roboto {
   font-family: 'Roboto', sans-serif;
 }
-
-//     font-size: 12px;
-//     line-height: 120%;
-//     background-color: #48b774;
-//     object-fit: cover;
-//     width: 90px;
-//     height: 24px;
-
 
 .outer-wrapper {
   max-width: 1100px;
@@ -114,8 +105,7 @@ input {
 
 .header {
   @include Poppins;
-  
-  // position: relative;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -171,7 +161,6 @@ input {
 .main-section {
   @include Poppins;
 
-  // position: relative;
   font-weight: 700;
   display: grid;
   grid-auto-columns: 1fr;
@@ -235,7 +224,6 @@ input {
 .main-section__image {
   grid-area: image;
   display: flex;
-  // background: url(./img/pic_greenCircle.png) 50% 30%;
   background-repeat: no-repeat;
 }
 
@@ -271,37 +259,21 @@ input {
     position: absolute;
     top: -246px;
     left: -224px;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // animation: move 2s infinite linear;
   }
 
   .flag-2 {
     position: absolute;
     top: -246px;
     left: -224px;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // animation: move 2s infinite linear;
   }
 }
 
 .move-1 {
     offset-path: path('M226,450a224,224 0 1,0 448,0a224,224 0 1,0 -448,0');
 
-    // transform: translate(-50%, -50%);
     -webkit-animation: move 20s infinite linear;
     animation: move 20s infinite linear;
 }
-
-
-
-  // offset-path: path('M56,33.12A150,150,0,1,1,0,150,149.34,149.34,0,01,56,33.12');
-  // offset-path: path('M196.5 148C125.833 168.333 -11.9999 167.4 2.00005 1');
-  // offset-path: path('M79.5 263.5C16 193.5 -68.6 43 101 1');
-  // offset-path: path('M0.5 182C24.5 87.3333 97.4 -73.6 197 40');
 
 @keyframes move {
   0% {
